@@ -1,3 +1,29 @@
+# ASSIGNMENT 09/25
+#take the input for the start and stop value for a range.
+# Then get the sum of odd and even numbers within that range using function or lambda and display that.
+
+
+first_range=int(input("Enter the first range:"))
+second_range = int(input("Enter the second range:"))
+num= range(first_range,second_range)
+even=list(filter(lambda x : x%2==0, num))
+odd = list(filter(lambda x : x%2!=0, num))
+even_sum=sum(even)
+odd_sum=sum(odd)
+print(even_sum)
+print(odd_sum)
+
+
+
+
+
+
+
+
+
+
+
+
 
 #Program to take user input of various data types and display string and integers separateky
 
@@ -13,18 +39,6 @@
 #1. Fibonacci: a program that takes an input of how many terms to be displayed for the fibonacci sequence and
 # then displays the total fibonacci sequence upto the number of terms specified
 
-#Process 1
-
-# user_input=input("Enter upto how many Fibonacci series to display ")
-# sum=0
-# for x in range(int(user_input)):
-#
-#     sum=sum+x
-#     print(sum)
-#
-# print(f"The total  Fibonacci series is {sum}")
-
-#Process 2
 
 # user_input=input("Enter upto how many Fibonacci series to display ")
 # int_userinput=int(user_input)
