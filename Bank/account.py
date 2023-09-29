@@ -14,10 +14,9 @@ class account:
         self.holder_name = holder_name
         self.balance = balance
 
+
     def tbalance(self):
         return self.balance
-
-
 
 class SavingAccount(account):
 
@@ -28,12 +27,15 @@ class SavingAccount(account):
 
     def interest(self,months):
 
-       self.balance =self.balance+ self.balance*0.75*months
+       self.balance =self.balance+ self.balance*self.interestrate*months
+       print(f"Welcome {self.holder_name}, your current balance in saving account is {self.balance}")
 
-savingaccount = SavingAccount(123,"Garisha", 500000,0.75)
-t.deposit(savingaccount,10000)
-t.withdrawal(savingaccount,1000)
-print(f"Account balance:{savingaccount.tbalance()}")
+savingaccount = SavingAccount(123,"Garisha", 500000,0.075)
+print(f"Actual Account balance:{savingaccount.tbalance()}")
+savingaccount.interest(5)
+# t.deposit(1000)
+# t.withdrawal(500)
+
 
 # class CheckingAccount(account):
 #     def __init__(self, number, name, balance):
