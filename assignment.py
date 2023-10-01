@@ -1,3 +1,14 @@
+
+# Create a package called bank which simulates a simple banking system.
+# Inside the package, create two modules: account and transaction.
+# The account module defines a base class Account with common attributes
+# like account_number, holder_name and balance.
+# After this create two subclasses SavingsAccount and CheckingAccount with their own methods.
+# The transaction module should provide functions for deposit and withdrawal.
+
+
+
+
 # Assignment 09/26
 # Write a Python program that manages book records using a file called book.txt.
 # The program should  ask the user to input an author's name.
@@ -6,40 +17,65 @@
 # The programs should handle the exceptions as well.
 
 
-def author(name):
-     try:
-        list=[]
-        with open("book.txt", "r") as file:
-            for x in file:
-                book , auth_name = x.strip().split(':')
-                if auth_name==name:
-                    list.append(book)
-        if not list:
-            print(f"No book found for author : {name}")
-        else:
-            for book in list:
-                print(f"Books of author {name}")
-                print(f"Book: {book}")
+# def author(name):
+#      try:
+#         list=[]
+#         with open("books.txt", "r") as file:
+#             for x in file:
+#                 book , auth_name = x.strip().split(',')
+#                 if auth_name==name:
+#                     list.append(book)
+#         if not list:
+#             print(f"No book found for author : {name}")
+#         else:
+#             for book in list:
+#                 print(f"Books of author {name}")
+#                 print(f"Book: {book}")
+#
+#
+#      except FileNotFoundError:
+#         print("File does not exist")
+#
+# authorname = input("enter the name of author to find their book")
+# author(authorname)
 
-
-     except FileNotFoundError:
-        print("File does not exist")
-
-authorname = input("enter the name of author to find their book")
-author(authorname)
+#
+# def search_by_author(name):
+#     try:
+#         found_books = []
+#         with open("books.txt", 'r') as file:
+#             for line in file:
+#                 author, title = line.strip().split(',')
+#                 if author == name:
+#                     found_books.append(title)
+#
+#         if found_books:
+#             print("books by the author ", name)
+#             for book in found_books:
+#                 print(f"title:{book} ")
+#         else:
+#             print("no books found by author ", name)
+#     # except FileNotFoundError:
+#     #     print("the file book.txt containing the records doesn't exist")
+#     except Exception as e:
+#         print(f"an error had occured:: {str(e)}")
+#
+#
+# author_name = input("enterthe authors name:")
+# search_by_author(author_name.lower())
 
 # 2.Write a function in Python to count words in a text file
 # those are ending with alphabet "e" (create your own text file for that)
 
-count = 0
-with open("book.txt", "r") as file:
-    for word in file:
-        wordsplit = word.strip().split()
-        for w in wordsplit:
-            if w.endswith('e'):
-                count += 1
-                print(w)
-    print(f"Total word Count : {count}")
+# count = 0
+# with open("book.txt", "r") as file:
+#     for word in file:
+#         wordsplit = word.strip().split()
+#         for w in wordsplit:
+#             if w.endswith('e'):
+#                 count += 1
+#                 print(w)
+#     print(f"Total word Count : {count}")
 
 
 # ASSIGNMENT 09/25
